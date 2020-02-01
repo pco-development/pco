@@ -1,0 +1,2 @@
+class OrderCrate < ApplicationRecord
+end

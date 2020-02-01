@@ -1,0 +1,38 @@
+
+<div class="row">
+	<div class="col col-sm-12 col-md-12">
+		<%= link_to "New", new_retailer_path, :class => "btn btn-primary float-right" %>
+	</div>
+</div>
+<table class="table">
+	<thead>
+		<tr>
+		<th>Sl No</th>
+		<th>Code</th>
+		<th>Name</th>
+		<th>Shop Name</th>
+		<th>Mobile</th>
+		<th>Alternate Mobile</th>
+		<th></th>
+	</tr>
+	</thead>
+	<tbody>
+		<% i = 1 %>
+		<% @retailers.each do |r| %>
+			<tr>
+				<td><%= i %></td>
+				<td><%= r.code %></td>
+				<td><%= r.name  %></td>
+				<td><%= r.shop_name  %></td>
+				<td><%= r.mobile  %></td>
+				<td><%= r.alternate_mobile  %></td>
+				<td>
+					<%= link_to fa_icon("eye"), show_retailer_path(r.id),  :class => "eye" %> &nbsp;&nbsp; 
+					<%= link_to fa_icon("pencil"), edit_retailer_path(r.id),  :class => "pencil" %> &nbsp;&nbsp; 
+					<%= link_to fa_icon('trash'), delete_retailer_path(r.id), data: {confirm: "Are you sure, Delete #{r.code} - #{r.name}?"}, :class => 'trash' %>
+					</td>
+			</tr>
+			<% i += 1 %>
+		<% end %>
+	</tbody>
+</table>

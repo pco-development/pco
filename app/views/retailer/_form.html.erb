@@ -1,0 +1,47 @@
+<div class="form-group">
+	<%= f.label :name, "Name" %>
+	<%= f.text_field :name, :class => "form-control"  %>
+</div>
+<div class="form-group">
+	<%= f.label :shop_name, "Shop Name" %>
+	<%= f.text_field :shop_name, :class => "form-control"  %>
+</div>
+<div class="form-group">
+	<%= f.label :mobile, "Mobile Number" %>
+	<%= f.text_field :mobile, :class => "form-control"  %>
+</div>
+<div class="form-group">
+	<%= f.label :alternate_mobile, "Alternate Number" %>
+	<%= f.text_field :alternate_mobile, :class => "form-control"  %>
+</div>
+
+<div class="form-group">
+	<%= f.label :email, "Email" %>
+	<%= f.text_field :email, :class => "form-control"  %>
+</div>
+<div class="form-group">
+	<%= f.label :address, "Address" %>
+	<%= f.text_area :address, :class => "form-control"  %>
+</div>
+<div class="form-group">
+	<%= f.label :landmark, "Landmark" %>
+	<%= f.text_field :landmark, :class => "form-control"  %>
+</div>
+<div class="form-group">
+	<%= f.label :pincode, "Zip Code" %>
+	<%= f.text_field :pincode, :class => "form-control"  %>
+</div>
+<div class="form-group">
+	<%= f.label :latitude, "Latitude" %>
+	<%= f.text_field :latitude, :class => "form-control"  %>
+</div>
+<div class="form-group">
+	<%= f.label :longitude, "Longitude" %>
+	<%= f.text_field :longitude, :class => "form-control"  %>
+</div>
+<div class="form-group">
+	<%= f.label :image, "Image" %>
+	<%= f.file_field :image, :class => "form-control"  %>
+</div>
+<%= f.submit "Save", :class => "btn btn-primary"  %>
+<%= link_to "Cancel", retailers_path,  :class => "btn btn-danger" %>

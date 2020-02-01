@@ -1,0 +1,40 @@
+<%= form_for @price_list, :url => create_pricelist_path do |f| %>
+	<div class="card mt-4 shadow p-3 mb-5 bg-white rounded">
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-4">
+					<%= f.label :date, "Date" %>
+				</div>
+				<div class="col-md-4">
+					<%= f.date_field :date, :class => "form-control input",  :value => Time.now.strftime('%Y-%m-%d'), 
+					:min => Time.now.strftime('%Y-%m-%d')   %>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+	</div>
+	<div class="card mt-2 shadow p-3 mb-5 bg-white rounded overflow-hidden">
+		<div class="card-body">
+			<div class="row ">
+				<div class="col-md-2"></div>
+				<div class="col-md-4">Product</div>
+				<div class="col-md-2">Available Qty</div>
+				<div class="col-md-2">Price / Unit</div>
+				<div class="col-md-2"></div>
+			</div>
+		  <% 10.times do %>
+		 	  <%= render "form", f: f %>
+		  <% end %>
+		  <div class="row">
+		  	<div class="col-md-2"></div>
+		  	<div class="col-md-8">
+		  		<%= f.submit "Save", :class => ""  %>
+		  	</div>
+		  	<div class="col-md-2"></div>
+		  </div>
+		</div>
+	</div>
+	
+  
+<% end %> 
