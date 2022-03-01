@@ -31,7 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 #Custom gems start
 gem 'geocoder', '~> 1.3', '>= 1.3.7'
 gem 'activestorage-validator', '>= 0.1.3'
-gem 'image_processing', '~> 1.9', '>= 1.9.3'
+gem 'image_processing', '~> 1.12'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem "select2-rails"
 #custom gems end
